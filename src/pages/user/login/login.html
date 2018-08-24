@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-offset-3 col-sm-6">
+        <div class="login">
+          <div class="login_box">
+            <img src="./assets/img/logoGluck.png">
+              <ul class="tittle-login">
+                 <!-- <li> <h3><a data-toggle="tab" routerLink="/users/login">Login</a></h3></li>   -->
+              </ul>  
+              
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="login-box">
+                    <form novalidate [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" #formDir="ngForm">
+                      <div class="form-group">
+                        <label for="email">{{'USER.USERNAME' | translate}}</label>
+                        <input type="email" id="email" class="form-control" formControlName="email" required>
+                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                          <div *ngIf="email.errors.required">{{'USER.EMAIL_REQUIRED' | translate}} </div>
+                          <div *ngIf="email.errors.pattern">
+                            {{'USER.INVALID_FIELD' | translate}}
+                          </div>
+                        </div>      
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="power">{{'USER.PASSWORD' | translate}}</label>
+                        <input type="password" id="password" class="form-control" formControlName="password" required>
+                        <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">        
+                          <div *ngIf="password.errors.required">{{'USER.PASS_REQUIRED' | translate}}</div>
+                        </div>
+                        <div ></div>
+                      </div>
+                      <div class="form-group alert alert-danger fade in" *ngIf="!errorLogin.status">
+                        <button class="close" (click)="errorLogin.status = true" >&times;</button>
+                        {{  errorLogin.msg }}
+                      </div>
+                        <div class="form-group">
+                          <a routerLink="/users/rememberPassword">{{'USER.FORGOT_PASSWORD' | translate}}</a>
+                        </div>
+                  
+                      <button type="submit" class="btn btn-accept btn-lg" [disabled]="loginForm.invalid">{{'USER.SIGN_IN' | translate}}</button>
+                      <!-- <button type="button" class="btn btn-red btn-lg" (click)="formDir.resetForm({})">Cancelar</button>-->
+                    </form>
+                  </div>
+                </div>
+              </div>
+            
+          </div> 
+        </div> 
+      </div> 
+  </div>
+  
+  <div class="row">
+        <div class="col-sm-offset-4 col-sm-4">
+            <h6 class="text-center legal">Copyright © 2018. Todos los derechos reservados Gluck 2018.</h6>
+        </div>
+    </div>
+</div>
+
+
+
+  

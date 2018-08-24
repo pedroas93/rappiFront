@@ -1,0 +1,9 @@
+@import "./src/scss/_variables";
+
+:host {
+    .box-button{
+        cursor: none;
+        width: 100%;
+        border-style: none;
+    }
+}

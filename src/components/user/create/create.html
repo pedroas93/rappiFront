@@ -1,0 +1,69 @@
+<div class="container" style="margin-top: 30px">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-8">
+          <h2> {{'USER.USERSTITLE' | translate}} </h2>
+        </div>
+      <form [formGroup]="formCreate" (ngSubmit)="create()">
+        <div class="row">
+          <div class="col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label for="firstName">{{'USER.FIRST_NAME' | translate}}</label>
+              <input formControlName="firstName" id="firstName" name="" type="text" class="form-control" autocomplete="off"/>
+              <div *ngIf="formCreate.controls['firstName'].invalid && (formCreate.controls['firstName'].dirty || formCreate.controls['firstName'].touched)" class="alert alert-danger" style="margin-top: 10px">
+                <div *ngIf="formCreate.controls['firstName'].errors.required">{{ 'USER.FIELD_REQUIRED' | translate }} </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label for="lastName">{{'USER.LAST_NAME' | translate}}</label>
+              <input formControlName="lastName" id="lastName" name="" type="text" class="form-control" autocomplete="off"/>
+
+              <div *ngIf="formCreate.controls['lastName'].invalid && (formCreate.controls['lastName'].dirty || formCreate.controls['lastName'].touched)" class="alert alert-danger" style="margin-top: 10px">
+                <div *ngIf="formCreate.controls['lastName'].errors.required">{{'USER.FIELD_REQUIRED' | translate}} </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label for="email">{{'USER.EMAIL' | translate}}</label>
+              <input formControlName="email" id="email" name="" type="text" class="form-control" autocomplete="off" />
+
+              <div *ngIf="formCreate.controls['email'].errors?.required && !formCreate.get('email').pristine" class="alert alert-danger" style="margin-top: 10px">
+                {{'USER.FIELD_REQUIRED' | translate}}
+              </div>
+              <div *ngIf="formCreate.controls['email'].errors?.pattern && !formCreate.get('email').pristine"  class="alert alert-danger" style="margin-top: 10px">
+                {{'USER.INVALID_FIELD' | translate}}
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label for="listRoles">{{'USER.ROLE' | translate}}</label>
+              <select formControlName="roles" id="listRoles" class="form-control">
+                <option *ngFor="let role of roles" [value]="role" >{{ role }}</option>
+              </select>
+              <div *ngIf="formCreate.controls['roles'].errors?.required && !formCreate.get('roles').pristine" class="alert alert-danger" style="margin-top: 10px">
+                {{'USER.FIELD_REQUIRED' | translate}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row">
+              <button type="submit" class="btn btn-accept  col-sm-3 pull-right" [disabled]="!formCreate.valid">{{ 'USER.SAVE' | translate }}</button>
+              <button *ngIf="statusFormEdit.stateBtnCancel || formCreate.valid" (click)="onCancel()" type="reset" class="btn btn-default pull-right col-sm-3" style="margin-right: 20px;">{{'USER.CANCEL' | translate}}</button>
+          </div>
+        </div>
+        <div class="row" *ngIf="creating">
+          <div class="col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-4">
+            <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

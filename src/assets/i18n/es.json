@@ -1,0 +1,31 @@
+{
+    "CATEGORIES": {
+        "CATEGORIES": "CATEGORIAS",
+        "PRODUCTS": "PRODUCTOS"
+    },
+    "SHOP": {
+        "SHOP": "CARRITO DE COMPRAS",
+        "NAME": "NOMBRE",
+        "SUB": "SUB NIVEL",
+        "PRICE": "PRECIO",
+        "AVIABLE": "DISPONIBILIDAD",
+        "NUMP": "NUMERO DE PRODUCTOS",
+        "CANT": "CANTIDAD QUE VA A COMPRAR",
+        "SAVE": "COMPRAR"
+    },
+    "SHARED": {
+        "REGISTRATION": "Registros",
+        "DRAF": "Borrador",
+        "ACTIVE": "Activo",
+        "INNACTIVE": "Inactive",
+        "BACK": "Volver",
+        "ORDER": "Orden",
+        "SEARCH": "Buscar...",
+        "ALL": "Todos",
+        "EDIT": "Editar",
+        "FINISH": "Terminar",
+        "DATE_CREATE": "Fecha de Creación",
+        "STATUS": "Estado",
+        "THERE_IS_NO_DATA": "No Existen Datos"
+    }
+}

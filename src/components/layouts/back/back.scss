@@ -1,0 +1,29 @@
+
+@import "./src/scss/_variables";
+
+.loadingContainer {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.btn-user{
+    background: transparent;
+    border: none;
+    color: #ffffff8f;
+}
+
+.example-toolbar {
+    background-color: $blue-dark;
+    color: white;
+}
+
+.mat-list-item {
+    color: $violet;
+}
+
+.shadow {
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.26) !important;
+}

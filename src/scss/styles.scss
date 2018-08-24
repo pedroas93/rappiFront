@@ -1,0 +1,422 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./_variables";
+
+
+
+body {
+    background-color: $white;
+    .cursor-p {
+      cursor: pointer;
+  }
+h1 {
+  font-size:$h1;
+}
+h2 {
+  font-size:$h2;
+}
+h3 {
+  font-size:$h3;
+}
+h4 {
+  font-size:$h4;
+}
+h5 {
+  font-size:$h5;
+} }
+
+//FONT
+.fn10 {
+  font-size: $font10;    
+}
+.fn12 {
+  font-size: $font12;    
+}
+.fn15 {
+  font-size: $font15;    
+}
+.fn18 {
+  font-size: $font18;    
+}
+.fn20 {
+  font-size: $font20;    
+}
+.fn22 {
+  font-size: $font22;    
+}
+.fn25 {
+  font-size: $font25;    
+}
+
+//PADDING
+.padg8 {
+  padding: $mgin8;   
+}
+.padg10 {
+  padding: $mgin10;   
+}
+.padg15 {
+  padding: $mgin15;    
+}
+.padg20 {
+  padding: $mgin20;    
+}
+.padg25 {
+  padding: $mgin25;    
+}
+.padg30{
+  padding: $mgin30;    
+}
+
+//COLORS
+.white {
+  color: $white;    
+}
+.black {
+  color: $black;
+} 
+.orange {
+  color: $orange;
+}
+.orangelight {
+  color: $orange-light;
+}
+.orangedark {
+  color: $orange-dark;
+}
+.blue {
+  color: $blue;
+}
+.bluelight {
+  color: $blue-light;
+}
+.bluedark {
+  color: $blue-dark;
+}
+.blue700 {
+  color: $blue700;
+}
+.yellow {
+  color: $yellow;
+}
+.yellowdark {
+  color: $yellow-dark;
+}
+.grey {
+  color: $grey;
+}
+.greydark {
+  color: $grey-dark;
+}
+
+//MARGIN
+.mtop0 {
+    margin-top: $mgin0;
+}
+.m-top06 {
+    margin-top: 0.6em;
+  }
+.mtop5 {
+    margin-top: $mgin5;
+}
+.mtop7 {
+    margin-top: $mgin7;
+}
+.mtop10 {
+    margin-top: $mgin10;
+}
+.mtop20 {
+    margin-top: $mgin20;
+}
+.mtop25 {
+    margin-top: $mgin25;
+}
+.mtop30 {
+    margin-top: $mgin30;
+}
+.mtop40 {
+    margin-top: $mgin40;
+}
+.mbot0 {
+    margin-bottom: $mgin0;
+}
+.mbot10 {
+    margin-bottom: $mgin10;
+}
+.mbot20 {
+    margin-bottom: $mgin20;
+}
+.mbot30 {
+    margin-bottom: $mgin30;
+}
+.mleft5 {
+margin-left: $mgin20;
+}
+a {
+    color: $blue-dark;
+}
+
+//ALING 
+
+.alg-center {
+  text-align: $acenter;
+}
+.alg-left {
+  text-align: $aleft;
+}
+.alg-right {
+  text-align: $aright;
+}
+
+.img-learn {
+  max-height: 115px !important;  
+}
+
+/* --MENU-- */
+.nav-superior {
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 99;
+}
+
+nav.navbar.navbar-inverse {
+    border: 0px;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+a#menu-toggle {
+    color: #fff!important;
+    line-height: 2.1em;
+    cursor: pointer;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.hamburguer {
+  background-color: $color-null;
+  border-color: $color-null;
+}
+
+.hamburguer::hover {
+  border-color: $color-null;
+}
+
+.icon-menu {
+    color: #fff!important;
+    font-size: 2.2em;
+    line-height: 1.6em;
+    margin: 10px 20px 10px 6px;
+}
+/* --FIN MENU--*/
+
+/* --LOGIN--*/
+.logo-login{
+  margin-bottom: 45px;
+}
+
+.tittle-login{
+ border-bottom: 1px solid #ddd;
+ border-radius: 4px 4px 0 0;
+ list-style: none;
+ cursor: default;
+ pointer-events: none;
+ padding-left: 2px;
+}
+
+.login {
+width: 85%;
+margin-top: 150px;
+padding: 10px;
+text-align: center;
+box-shadow: black 2px 2px 10px;
+}
+
+.login-box{
+ width: 100%;
+ background: #f5f5f5;
+ padding: 20px;
+ float: left;
+}
+
+.legal { padding-right: 63px;
+}
+/* --FIN LOGIN--*/
+
+ #page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 60px 10px 15px 10px;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+
+#sidebar-wrapper {
+  position: fixed;
+  left: 250px;
+  top: 65px;
+  width: 100%;
+  height: 100%;
+  margin-left: -250px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  display: none;
+}
+
+.sidebar-nav {
+  width: 260px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #eee;
+  overflow-y: auto;
+  position: fixed;
+  height: 100%;
+  bottom: 0px;
+  padding-top: 63px;
+  li {
+    text-indent: 10px;
+    line-height: 50px;
+    a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 16px;
+      &:active, &:focus {
+        text-decoration: none;
+        color: #0091EA;
+        background: rgba(189, 189, 189, 0.2);
+        border-left: 5px solid #0091EA;
+      }
+    }
+  }
+  > .sidebar-brand {
+    a {
+      color: #999999;
+      &:hover {
+        color: #fff;
+        background: none;
+        border: none;
+      }
+    }
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #bbb;
+  }
+}
+
+/* --BOTONES--*/
+.btn-reject {
+    background-color: $red;
+    border-color: $red;
+    color: white;
+}
+
+.btn-accept {
+    background-color: $green;
+    border-color: $green;
+    color: white;
+}
+
+.btn-date {
+  width: auto;
+  height: 45px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  background: #fafafa;
+  color: #333;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 2.2em;
+}
+/* --FIN BOTONES--*/
+
+span.icont {
+  margin-right: 5px!important;
+}
+
+.form-control {
+  height: 45px;
+}
+
+/* --TABLAS--*/
+
+.table {
+  thead th {
+    vertical-align: bottom;
+    color: $violet;
+    border-bottom: 2px solid #dee2e6;
+  }
+  td, th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* --CAJAS--*/
+
+.box-general {
+  margin-top: $mgin20;
+  margin-bottom: $mgin20;
+  padding: $mgin20;
+  margin: auto;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.26);
+}
+
+.box-inner {
+  margin-top: $mgin20;
+  padding: $mgin15;
+  margin: auto;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.26);
+}
+
+
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';

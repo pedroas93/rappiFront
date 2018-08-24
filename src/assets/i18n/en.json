@@ -1,0 +1,31 @@
+{
+    "CATEGORIES": {
+        "CATEGORIES": "CATEGORIES",
+        "PRODUCTS": "PRODUCTS"
+    },
+    "SHOP": {
+        "SHOP": "SHOP",
+        "NAME": "NAME",
+        "SUB": "SUB LEVEL",
+        "PRICE": "PRICE",
+        "AVIABLE": "AVIABLE",
+        "NUMP": "NUM PRODUCTS",
+        "CANT": "CANT OF SHOP",
+        "SAVE": "SHOPING"
+    },
+    "SHARED": {
+        "REGISTRATION": "REGISTRATION",
+        "DRAF": "DRAF",
+        "ACTIVE": "ACTIVE",
+        "INNACTIVE": "INNACTIVE",
+        "BACK": "BACK",
+        "ORDER": "ORDER",
+        "SEARCH": "SEARCH...",
+        "ALL": "ALL",
+        "EDIT": "EDIT",
+        "FINISH": "FINISH",
+        "DATE_CREATE": "DATE OF CREATE",
+        "STATUS": "STATUS",
+        "THERE_IS_NO_DATA": "THERE IS NO DATA"
+    }
+}

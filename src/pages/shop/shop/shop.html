@@ -1,0 +1,13 @@
+
+<app-component-form-shop [newShop]="shopEvent" (changeUpdateDataTests)="shopEvent = $event"></app-component-form-shop>
+
+<app-component-shared-grid
+        [data]="dataTests"
+        [config]="dataConfig"
+        [loadingData] = "loadingData" 
+        (cantItem) = "cant" 
+        (selectItem)= "showMultimedia($event)"
+        (deleteItem)= "removeTests($event)"
+        (editItem)= "editShopTests($event)"
+        >
+</app-component-shared-grid>

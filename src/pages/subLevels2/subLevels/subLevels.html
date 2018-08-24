@@ -1,0 +1,37 @@
+<div class="container-fluid">
+        <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-8">
+                <h2> SUB-NIVELES </h2>
+              </div>
+            </div>
+</div>
+
+<app-component-shared-grid
+        [data]="dataTests"
+        [config]="dataConfig"
+        [loadingData] = "loadingData" 
+        (selectItem)= "showMultimedia($event)"
+        (changeStateItem)= "changeState($event)"
+        (deleteItem)= "removeTests($event)"
+        (editItem)= "editInterviewTests($event)"
+        >
+</app-component-shared-grid>
+
+<div class="container-fluid">
+        <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-8">
+                <h2> PRODUCTOS </h2>
+              </div>
+            </div>
+</div>
+
+<app-component-shared-grid
+        [data]="dataProducts"
+        [config]="dataConfig2"
+        [loadingData] = "loadingData"
+        (selectItem)= "selectecdProduct($event)"
+        (editItem)= "selectecdProduct($event)"
+        >
+</app-component-shared-grid>

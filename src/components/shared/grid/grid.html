@@ -1,0 +1,84 @@
+<div class="container-fluid mtop40">
+    <div class="col-md-12">
+            <h2>#{{(draggable) ? filteredData.length : data.length }} {{'SHARED.REGISTRATION' | translate}}</h2>    
+            <div class="box-general">
+                <div class="form-group col-sm-8">
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                        <input type="text" class="form-control" placeholder="{{'SHARED.SEARCH' | translate}}" [(ngModel)]="filterModel['global']" (ngModelChange)="filterList()">
+                    </div>
+                </div>
+                <table class="table table-striped table-responsive">
+                    <thead>
+                    <tr>
+                        <th *ngIf="!draggable">
+                            {{'SHARED.ORDER' | translate}}
+                        </th>
+                        <th scope="col" *ngFor="let head of config.headBoard; let i = index;">
+                            {{head.title | translate}}
+                            <span *ngIf="head.orderFilter">
+                                <button *ngIf="draggable" class="btn btn-sm glyphicon"
+                                    (click)="orderField(i, head.id)"
+                                    [ngClass]="{'glyphicon-chevron-down': head.orderType === 'ASC',  'glyphicon-chevron-up': head.orderType === 'DESC'}">
+                                </button>
+                            </span>
+                        </th>
+                        <th>
+                            <button *ngIf="draggable && config.dragAndDrop" (click)="changeBooleanDraggable(); createClonData() " class="btn btn-sm glyphicon glyphicon-pencil btn-success">{{'SHARED.EDIT' | translate}}</button>
+                            <button *ngIf="!draggable" (click)="changeBooleanDraggable(); changeOrder()" class="btn btn-sm glyphicon glyphicon-pencil btn-success">{{'SHARED.FINISH' | translate}}</button>
+                        </th>
+                    </tr>
+                    </thead>
+                    <mat-spinner *ngIf="loadingData" [diameter]="40" style="position: relative;"></mat-spinner>
+                    <tbody *ngIf="draggable">
+                        <tr>
+                            <td *ngFor="let head of config.headBoard;">
+                                <input *ngIf="head.items === undefined" type="text" class="form-control" placeholder="{{head.title | translate}}" [(ngModel)]="filterModel[head.id]" (ngModelChange)="filterList()"/>
+                                <select *ngIf="head.items != undefined" class="form-control" [(ngModel)]="filterModel[head.id]" (change)="filterList()">
+                                    <option value=""> {{'SHARED.ALL' | translate}} </option>
+                                    <option *ngFor="let item of head.items" value="{{item.id}}"> {{item.title | translate}} </option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody [sortablejs] = "data"  [sortablejsOptions] ="{animation: 100, disabled: draggable}">
+                        <tr *ngFor="let info of ((draggable) ? ((filteredData) ? filteredData.slice(range,limitRange) : []) : (data)); let i = index;">
+                            <td *ngIf="!draggable">
+                                {{i}}
+                            </td>
+                            <td *ngFor="let head of config.headBoard" (click)="(head.viewAction && draggable) ? selectItem.emit(info) : $event.stopPropagation()" [style.cursor]="(head.viewAction) || (!draggable) ? 'pointer' : 'default'">
+                                <span *ngIf="!head.viewMore">
+                                    {{ ((info[head.id].title) ? (info[head.id].title | translate) : info[head.id])}}
+                                </span>
+                                <span *ngIf="head.viewMore && { status: true } as statusBox" [style.word-break]="'break-word'">
+                                    {{ (statusBox.status && info[head.id].length > 20) ? info[head.id].slice(0,20)+' ...' : info[head.id] }}
+                                    <i class="glyphicon glyphicon-chevron-down btn btn-xs btn-default" (click)="statusBox.status = false" *ngIf="statusBox.status && info[head.id].length > 20" ></i>
+                                    <i class="glyphicon glyphicon-chevron-up  btn btn-xs btn-default" (click)="statusBox.status = true" *ngIf="!statusBox.status" ></i>
+                                </span>
+                                
+                            </td>
+                            <td *ngIf="draggable">
+                                <button *ngIf="config.action.delete" (click)="deleteItem.emit(info)" class="btn-danger btn btn-sm glyphicon glyphicon-trash"></button>
+                                <button *ngIf="config.action.edit" (click)="editItem.emit(info)" class="btn btn-sm glyphicon btn-success">Agregar</button>
+                                <button *ngIf="config.action.sum" (click)="sumItem.emit(info)" class="btn btn-sm glyphicon btn-success">+</button>
+                                <input *ngIf="config.action.cant" type="text" class="cantItem.emit(info)" placeholder="cantidad" />
+                                <button *ngIf="config.action.res" (click)="resItem.emit(info)" class="btn btn-sm glyphicon glyphicon-minus"></button>
+                                <button *ngIf="config.action.viewItem" (click) = "selectItem.emit(info)" class="btn btn-sm btn-success glyphicon glyphicon-search"> </button>
+                                <button *ngIf="config.action.changeState" (click)="changeStateItem.emit(info)" class="btn btn-sm btn-success">{{changestatus[info.status['id']] | translate}}</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                    <h1 *ngIf="data.length <= 0 && !loadingData"> {{'SHARED.THERE_IS_NO_DATA' | translate}}</h1>
+                    <mat-paginator *ngIf="draggable"
+                    #paginador
+                    [length]="filteredData.length"
+                    [pageSize]="config.pageSize"
+                    [pageSizeOptions]="[10,20,50]"
+                    [showFirstLastButtons] = true
+                    (page)="changePage($event)">
+                    </mat-paginator>
+                </table>
+            </div>   
+    </div>
+</div>

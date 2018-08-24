@@ -1,0 +1,12 @@
+<!-- <app-component-form-interview [newInterview]="interviewEvent" (changeUpdateDataTests)="interviewEvent = $event"></app-component-form-interview> -->
+
+<app-component-shared-grid
+        [data]="dataTests"
+        [config]="dataConfig"
+        [loadingData] = "loadingData" 
+        (selectItem)= "showMultimedia($event)"
+        (changeStateItem)= "changeState($event)"
+        (deleteItem)= "removeTests($event)"
+        (editItem)= "editInterviewTests($event)"
+        >
+</app-component-shared-grid>
