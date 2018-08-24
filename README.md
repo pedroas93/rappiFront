@@ -1,5 +1,7 @@
 # RappiFront
 
+Si tiene algunproblema con las depencencias, utilice el comando npm install, adicionalmente encontrara un zip llamado Video Explicacón Prueba Front.zip, en este video encontrara como navegar en la pagina. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
