@@ -8,19 +8,12 @@
         <mat-icon class="glyphicon glyphicon-arrow-thick-down"></mat-icon>
         <button mat-icon-button [matMenuTriggerFor]="menu" class="btn-user">
             <mat-icon class="glyphicon glyphicon-user"></mat-icon>
-            <!-- {{ user.firstName }} -->
         </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item>
             <mat-icon class="glyphicon glyphicon-user"></mat-icon>
-            <!-- {{ user.firstName }} -->
           </button>
           <app-lang-menu></app-lang-menu>
-          <!-- <a mat-menu-item routerLink="/users/changePassword" style="text-decoration: none">
-            <mat-icon>voicemail</mat-icon>
-            <span>{{'USER.CHANGE_PASSWORD' | translate}}</span>
-          </a> -->
-          <!-- <app-sign-out></app-sign-out> -->
         </mat-menu>
     </div>
   </mat-toolbar>
@@ -30,14 +23,6 @@
       <mat-nav-list>
         <a mat-list-item routerLink="/categories">{{'CATEGORIES.CATEGORIES' | translate}}</a>
         <a mat-list-item routerLink="/shop">{{'SHOP.SHOP' | translate}}</a>
-        <!-- <a mat-list-item routerLink="/users/personalTests">{{'PERSONAL_TESTS.PERSONAL_TESTS' | translate}}</a>
-        <a mat-list-item routerLink="/users/create">{{'USER.USERS' | translate}}</a>
-        <a *ngIf="roleAdmin === true" mat-list-item routerLink="/users/interview">{{'INTERVIEW.INTERVIEWS' | translate}}</a>
-        <a *ngIf="roleAdmintechs === true" mat-list-item routerLink="/users/audit">{{'AUDIT.AUDITS' | translate}}</a>
-        <a  mat-list-item routerLink="/users/notifiquetions">{{'NOTIFICATION.NOTIFICATIONS' | translate}}</a>
-        <a  mat-list-item routerLink="/reports/report">{{'REPORTS.REPORTS' | translate}}</a>
-        <a  mat-list-item routerLink="/dailyMessage"> {{'DAILYMESSAGE.DAILYMESSAGES' | translate}}</a>
-        <a  mat-list-item routerLink="/purpose">{{'PURPOSES.PURPOSES' | translate}}</a> -->
       </mat-nav-list>
     </mat-sidenav>
 
