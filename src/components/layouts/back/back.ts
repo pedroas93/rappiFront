@@ -19,18 +19,9 @@ export class ComponentLayoutsBack implements OnDestroy {
   roleAdmin: any;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    // this.user = {firstName: '', lastName: '', email: '', roles: null};
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-
-    // this.userSubscription = this.auth.user$.subscribe((info: any) => {
-    //   if (info) {
-    //     this.user = {...info};
-    //     this.roleAdmintechs = info.roles.adminTechs;
-    //     this.roleAdmin = info.roles.admin;
-    //   }
-    // });
   }
 
   ngOnDestroy(): void {
