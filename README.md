@@ -1,6 +1,6 @@
 # RappiFront
 
-## Si tiene algunproblema con las depencencias, utilice el comando npm install
+## Si tiene algunproblema con las depencencias, utilice el comando npm install,para una mejor navegación de la pagina, he montado un video en el siguiente link https://www.youtube.com/watch?v=yxvnPfU2I08&feature=youtu.be nonde se muestra como funciona la pagina.
 
 si tiene probelmas al correrlo, debe configurar el archivo .angular-cli.json, que es un archivo oculto, aqui muestro mi archivo .angular-cli.json
 ##//-------------------------------------//
