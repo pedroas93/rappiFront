@@ -3,7 +3,7 @@
 ## Si tiene algunproblema con las depencencias, utilice el comando npm install, adicionalmente encontrara un zip llamado Video Explicacón Prueba Front.zip, en este video encontrara como navegar en la pagina. 
 
 si tiene probelmas al correrlo, debe configurar el angular cli, que es un archivo oculto, aqui muestro mi archivo .angular-cli.json
-//-------------------------------------//
+##//-------------------------------------//
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
@@ -65,7 +65,7 @@ si tiene probelmas al correrlo, debe configurar el angular cli, que es un archiv
   }
 }
 
-//----------//
+##//----------//
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
