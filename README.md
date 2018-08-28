@@ -1,6 +1,8 @@
 # RappiFront
 
-## Si tiene algunproblema con las depencencias, utilice el comando npm install,para una mejor navegación de la pagina, he montado un video en el siguiente link https://www.youtube.com/watch?v=yxvnPfU2I08&feature=youtu.be nonde se muestra como funciona la pagina.
+## Si tiene algunproblema con las depencencias, utilice el comando npm install,para una mejor navegación de la pagina, he montado un video en el siguiente link https://www.youtube.com/watch?v=yxvnPfU2I08&feature=youtu.be donde se muestra como funciona la pagina.
+
+## La base de datos esta en firestore, que es una base de datos de firebase, esta cuenta con mis credenciales, por lo cual no se pueden ver los datos directamente, si no através de la aplicacion de firestore.
 
 si tiene probelmas al correrlo, debe configurar el archivo .angular-cli.json, que es un archivo oculto, aqui muestro mi archivo .angular-cli.json
 ##//-------------------------------------//
